@@ -1,3 +1,9 @@
+# What is it
+It's a notes taking app.
+
+# How to run it
+Currently it's not deployed but you can run it locally with `npm run dev` (I guess you may need to have Vite installed for it).
+
 # Useful resources
 
 * [react-mde](https://www.npmjs.com/package/react-mde)
