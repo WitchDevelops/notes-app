@@ -23,10 +23,11 @@ const App = () => {
     localStorage.setItem("notes", JSON.stringify(notes))
   }, [notes]);
 
+  // new notes are added at the top
   function createNewNote() {
     const newNote = {
       id: nanoid(),
-      body: "# Type your markdown note's title here"
+      body: "# Title of your note"
     }
     setNotes(prevNotes => [newNote, ...prevNotes])
     setCurrentNoteId(newNote.id)
