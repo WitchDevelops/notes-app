@@ -7,7 +7,10 @@ import Sidebar from './components/Sidebar';
 const App = () => {
   //get notes from local storage, if there are any
   const [notes, setNotes] = useState(
-     JSON.parse(localStorage.getItem("notes")) || []
+    //if it's a function, it doesn't run every time the state changes
+    //it's called lazy state initialization
+    //just an arrow function with an implicit return
+    () => JSON.parse(localStorage.getItem("notes")) || []
   );
 
   const [currentNoteId, setCurrentNoteId] = useState(
